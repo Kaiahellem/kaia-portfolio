@@ -3,9 +3,9 @@ import HoverImage from "@/components/HoverImage";
 import RevealText from "@/components/RevealText";
 
 const menu = [
-  { n: "01", label: "Prosjekter", href: "#prosjekter" },
-  { n: "02", label: "Om meg", href: "#om-meg" },
-  { n: "03", label: "Kontakt", href: "#kontakt" },
+  { label: "Prosjekter", href: "#prosjekter" },
+  { label: "Om meg", href: "#om-meg" },
+  { label: "Kontakt", href: "#kontakt" },
 ];
 
 const about = [
@@ -30,9 +30,8 @@ export default function Home() {
       <nav aria-label="Seksjoner" className={`${wrap} pb-[72px] md:pb-32`}>
         <ul>
           {menu.map((m) => (
-            <li key={m.n} className="border-t border-stone last:border-b">
+            <li key={m.href} className="border-t border-stone last:border-b">
               <a href={m.href} className="group flex items-center gap-[14px] py-[18px] md:py-7">
-                <span className="text-[11px] font-medium text-accent">{m.n}</span>
                 <span className="flex-1 font-serif text-[30px] leading-tight transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:translate-x-2 md:text-6xl">
                   {m.label}
                 </span>
@@ -47,7 +46,7 @@ export default function Home() {
 
       {/* Prosjekter */}
       <section id="prosjekter" className={`${wrap} scroll-mt-10 pb-20 md:pb-40`}>
-        <p className="eyebrow mb-5 md:mb-10">01 · Prosjekter</p>
+        <p className="eyebrow mb-5 md:mb-10">Prosjekter</p>
         <article className="grid gap-5 md:grid-cols-12 md:items-end md:gap-10">
           <HoverImage
             src="/images/havn.jpg"
@@ -94,7 +93,7 @@ export default function Home() {
 
       {/* Om meg */}
       <section id="om-meg" className={`${wrap} scroll-mt-10 pb-20 md:pb-40`}>
-        <p className="eyebrow mb-5 md:mb-10">02 · Om meg</p>
+        <p className="eyebrow mb-5 md:mb-10">Om meg</p>
         <RevealText as="h2" className="max-w-4xl font-serif text-2xl leading-[1.25] md:text-5xl md:leading-[1.15]">
           Jeg er Kaia, frontendutvikler og designer i Oslo, med bachelor i frontend- og mobilutvikling fra
           Høyskolen Kristiania.
@@ -120,7 +119,7 @@ export default function Home() {
 
       {/* Kontakt */}
       <section id="kontakt" className={`${wrap} scroll-mt-10 pb-14`}>
-        <p className="eyebrow mb-5 md:mb-10">03 · Kontakt</p>
+        <p className="eyebrow mb-5 md:mb-10">Kontakt</p>
         <a
           href="mailto:kaia.hellem@gmail.com"
           className="font-serif text-[clamp(1.875rem,6.4vw,5rem)] leading-[1.1] underline decoration-1 underline-offset-[0.12em] transition-colors hover:text-accent"
