@@ -108,7 +108,7 @@ export default function Home() {
       <section data-waypoint="section" id="om-meg" className={`${wrap} scroll-mt-10 pb-20 md:pb-40`}>
         <p className="eyebrow mb-5 md:mb-10">Om meg</p>
         <RevealText as="h2" className="max-w-4xl font-serif text-2xl leading-[1.25] md:text-5xl md:leading-[1.15]">
-          Hei, jeg er Kaia! En frontendutvikler og designer i Oslo som liker å gjøre ideer om til digitale
+          Hei, jeg er Kaia! Frontendutvikler og designer i Oslo som liker å gjøre ideer om til digitale
           opplevelser.
         </RevealText>
         <div className="mt-5 grid gap-5 md:mt-16 md:grid-cols-12 md:gap-10">
