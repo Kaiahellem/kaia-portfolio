@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import HoverImage from "@/components/HoverImage";
 import RevealText from "@/components/RevealText";
+import MelleVisual from "@/components/MelleVisual";
 
 const menu = [
   { label: "Prosjekter", href: "#prosjekter" },
@@ -87,6 +88,34 @@ export default function Home() {
               Se case{" "}
               <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
             </a>
+          </div>
+        </article>
+
+        {/* Melle Studio: tekst til venstre, visuell identitet til høyre på desktop */}
+        <article className="mt-16 grid gap-5 md:mt-32 md:grid-cols-12 md:items-end md:gap-10">
+          <MelleVisual className="md:order-2 md:col-span-7" />
+          <div className="md:order-1 md:col-span-5">
+            <div className="flex justify-between text-xs text-muted">
+              <span>Egen merkevare</span>
+              <span>2026</span>
+            </div>
+            <RevealText as="h2" className="mt-5 font-serif text-[38px] leading-[1.05] md:text-6xl">
+              Melle Studio
+            </RevealText>
+            <RevealText className="mt-[10px] text-[15px] leading-[1.5] md:text-base">
+              Navn, posisjonering og visuell identitet for mitt eget studio, rettet mot bolig- og
+              interiørbransjen.
+            </RevealText>
+            <dl className="mt-5 grid grid-cols-2 gap-4 border-t border-stone pt-[14px]">
+              <div>
+                <dt className="text-[10px] font-medium uppercase tracking-[0.12em] text-muted">Rolle</dt>
+                <dd className="mt-1 text-[13px]">Strategi &amp; identitet</dd>
+              </div>
+              <div>
+                <dt className="text-[10px] font-medium uppercase tracking-[0.12em] text-muted">Verktøy</dt>
+                <dd className="mt-1 text-[13px]">Figma</dd>
+              </div>
+            </dl>
           </div>
         </article>
       </section>
