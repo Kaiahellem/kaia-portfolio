@@ -7,6 +7,7 @@ const description =
   "Kaia Hellem designer og bygger merkevare og nettsider. Frontendutvikler og designer i Oslo.";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.kaiahellem.no"),
   title: "Kaia Hellem — Design & web",
   description,
   robots: { index: false, follow: false },
