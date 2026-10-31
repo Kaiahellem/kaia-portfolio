@@ -90,3 +90,13 @@ html.js .loader {
   outline: 2px solid var(--color-accent);
   outline-offset: 3px;
 }
+
+/* Melle-kortet: linjen under aktiv fane fylles opp til neste visning */
+@keyframes melle-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
