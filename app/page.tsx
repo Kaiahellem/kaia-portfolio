@@ -5,10 +5,11 @@ import MelleVisual from "@/components/MelleVisual";
 import HavnMock from "@/components/HavnMock";
 
 const about = [
-  "Jeg har bakgrunn som IT-konsulent innen kvalitetssikring og testing av store, offentlige systemer. Nå designer og utvikler jeg selv, blant annet i Next.js, TypeScript og Sanity.",
-  "Jeg trives best i skjæringspunktet mellom design og kode, og liker å følge et prosjekt fra idé til ferdig produkt. Nå ser jeg etter et frontendteam hvor jeg kan lære, bidra og bygge ting som faktisk blir brukt.",
+  "Jeg designer i Figma og bygger i Next.js og Sanity. AI er en fast del av måten jeg jobber på, men det er jeg som avgjør hva som er godt nok.",
+  "Jeg legger merke til detaljene. En knapp som sitter litt skjevt, en tekst som er tung å lese på mobil, et steg der brukeren stopper opp. Det er ofte der forskjellen ligger.",
+  "Nå ser jeg etter et team der jeg kan lære av flinke folk, ta ansvar og lage ting som faktisk blir brukt.",
   "Når jeg ikke jobber, er jeg som regel på sjøen. Jeg har en seilbåt i Oslo og drømmer om å seile jorda rundt.",
-];
+]
 
 const links = [
   { label: "GitHub", text: "github.com/Kaiahellem", href: "https://github.com/Kaiahellem" },
@@ -54,8 +55,10 @@ export default function Home() {
               rel="noreferrer"
               className="group mt-5 inline-block text-[13px] font-medium text-accent underline underline-offset-4"
             >
-              Se case{" "}
-              <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+              Se nettsiden{" "}
+              <span className="inline-block transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+                ↗
+              </span>
             </a>
           </div>
         </article>
@@ -65,15 +68,20 @@ export default function Home() {
           <MelleVisual className="md:order-2 md:col-span-7" />
           <div className="md:order-1 md:col-span-5">
             <div className="flex justify-between text-xs text-muted">
-              <span>Egen merkevare</span>
-              <span>2026</span>
+              <span>Selvinitiert</span>
+              <span className="flex items-center gap-2 font-mono uppercase">
+                <span className="relative flex size-1.5">
+                  <span className="absolute inset-0 animate-ping bg-ink opacity-60 motion-reduce:hidden" />
+                  <span className="relative size-1.5 bg-ink" />
+                </span>
+                Pågår
+              </span>
             </div>
             <RevealText as="h2" className="mt-5 font-serif text-[38px] leading-[1.05] md:text-6xl">
               Melle Studio
             </RevealText>
             <RevealText className="mt-[10px] text-[15px] leading-[1.5] md:text-base">
-              Navn, posisjonering og visuell identitet for mitt eget studio, rettet mot bolig- og
-              interiørbransjen.
+              Navn, posisjonering og visuell identitet for et designstudio.
             </RevealText>
             <dl className="mt-5 grid grid-cols-2 gap-4 border-t border-stone pt-[14px]">
               <div>
@@ -93,8 +101,8 @@ export default function Home() {
       <section data-waypoint="section" id="om-meg" className={`${wrap} scroll-mt-10 pb-20 md:pb-40`}>
         <p className="eyebrow mb-5 md:mb-10">Om meg</p>
         <RevealText as="h2" className="max-w-4xl font-serif text-2xl leading-[1.25] md:text-5xl md:leading-[1.15]">
-          Jeg er Kaia, frontendutvikler og designer i Oslo, med bachelor i frontend- og mobilutvikling fra
-          Høyskolen Kristiania.
+          Jeg er Kaia, designer og frontendutvikler i Oslo. Jeg liker best å ha hele løpet, fra første skisse til
+          siden er på nett.
         </RevealText>
         <div className="mt-5 grid gap-5 md:mt-16 md:grid-cols-12 md:gap-10">
           <figure className="md:col-span-5">
