@@ -3,6 +3,7 @@ import HoverImage from "@/components/HoverImage";
 import RevealText from "@/components/RevealText";
 import MelleVisual from "@/components/MelleVisual";
 import HavnMock from "@/components/HavnMock";
+import PortalMock from "@/components/PortalMock";
 import Process from "@/components/Process";
 
 const about = [
@@ -30,6 +31,8 @@ const havnLinks = [
   { label: "Se nettsiden", href: "https://styling.havnbolig.no" },
   { label: "Se koden", href: "https://github.com/Kaiahellem/havn-boligstyling" },
 ];
+
+const portalLinks = [{ label: "Se koden", href: "https://github.com/Kaiahellem/portal" }];
 
 const wrap = "mx-auto max-w-6xl px-5 md:px-10";
 
@@ -87,10 +90,59 @@ export default function Home() {
           </div>
         </article>
 
-        {/* Melle Studio: tekst til venstre, visuell identitet til høyre på desktop */}
-        <article data-waypoint="project" data-label="MELLE" className="mt-16 grid gap-5 md:mt-32 md:grid-cols-12 md:items-end md:gap-10">
-          <MelleVisual className="md:order-2 md:col-span-7" />
+        {/* Portal: tekst til venstre, admin og kundeside til høyre på desktop */}
+        <article data-waypoint="project" data-label="PORTAL" className="mt-16 grid gap-5 md:mt-32 md:grid-cols-12 md:items-end md:gap-10">
+          <PortalMock className="md:order-2 md:col-span-7" />
           <div className="md:order-1 md:col-span-5">
+            <div className="flex justify-between text-xs text-muted">
+              <span>Selvinitiert</span>
+              <span>2026</span>
+            </div>
+            <RevealText as="h2" className="mt-5 font-serif text-[40px] leading-[1.02] md:text-[64px]">
+              Portal
+            </RevealText>
+            <RevealText className="mt-[10px] text-[15px] leading-[1.5] md:text-base">
+              Kundeportal for webprosjekter: ett sted der kunden ser hvor prosjektet står, hva de må gjøre nå, og
+              alle dokumenter, filer og godkjenninger. Innlogging uten passord, tilgangsstyring i databasen med egne
+              tester, og ende-til-ende-tester med tilgjengelighetssjekk (WCAG 2.1 AA) på desktop og mobil.
+            </RevealText>
+            <dl className="mt-5 grid grid-cols-2 gap-4 border-t border-stone pt-[14px]">
+              <div>
+                <dt className="text-[10px] font-medium uppercase tracking-[0.12em] text-muted">Rolle</dt>
+                <dd className="mt-1 text-[13px]">Design &amp; utvikling</dd>
+              </div>
+              <div>
+                <dt className="text-[10px] font-medium uppercase tracking-[0.12em] text-muted">Verktøy</dt>
+                <dd className="mt-1 text-[13px]">Next.js, TypeScript, Supabase, Playwright</dd>
+              </div>
+            </dl>
+            <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2">
+              {portalLinks.map((l) => (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group inline-block text-[13px] font-medium text-accent underline underline-offset-4"
+                >
+                  {l.label}{" "}
+                  <span
+                    aria-hidden
+                    className="inline-block transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  >
+                    ↗
+                  </span>
+                  <span className="sr-only"> (åpnes i ny fane)</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </article>
+
+        {/* Melle Studio: visuell identitet til venstre, tekst til høyre på desktop */}
+        <article data-waypoint="project" data-label="MELLE" className="mt-16 grid gap-5 md:mt-32 md:grid-cols-12 md:items-end md:gap-10">
+          <MelleVisual className="md:col-span-7" />
+          <div className="md:col-span-5">
             <div className="flex justify-between text-xs text-muted">
               <span>Selvinitiert</span>
               <span className="flex items-center gap-2">
