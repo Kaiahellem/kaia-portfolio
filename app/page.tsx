@@ -8,7 +8,7 @@ import Process from "@/components/Process";
 const about = [
   "Jeg liker å utforske ideer og gjøre dem om til gjennomtenkte uttrykk og digitale opplevelser. Fra de første skissene og valg av farger og typografi, til design og utvikling av nettsider. Jeg trives best når jeg får kombinere det visuelle med det tekniske, og følge et prosjekt hele veien fra idé til ferdig produkt.",
   "Jeg er opptatt av å lage ting som både ser bra ut, fungerer godt og gir verdi for dem som bruker dem.",
-  "Utenfor skjermen finner du meg helst på sjøen, gjerne med seilbåten i Oslofjorden.",
+  "Utenfor skjermen finner du meg helst på sjøen, gjerne med seilbåten min i Oslofjorden.",
 ];
 
 const links = [
