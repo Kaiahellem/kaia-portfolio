@@ -17,6 +17,10 @@ npm run dev
 - `public/images/havn-mobil.webp` — første skjerm av mobilversjonen, vist i telefontegningen
 - `public/images/kaia.jpg` — bildet fra Oslofjorden (1200 × 1600)
 
+## CV
+
+`public/cv/Kaia-Hellem-CV.pdf` er lenket fra Kontakt-seksjonen. Kilden ligger i `cv/cv.html`. For å lage ny PDF: åpne filen i Chrome, trykk Cmd + P, velg «Lagre som PDF», marger «Ingen» og huk av «Bakgrunnsgrafikk».
+
 ## Animasjoner
 
 | Animasjon | Fil | Hva den gjør |

@@ -14,6 +14,7 @@ const about = [
 const links = [
   { label: "GitHub", text: "github.com/Kaiahellem", href: "https://github.com/Kaiahellem" },
   { label: "LinkedIn", text: "linkedin.com/in/kaiahellem", href: "https://www.linkedin.com/in/kaiahellem/" },
+  { label: "CV", text: "Last ned PDF", href: "/cv/Kaia-Hellem-CV.pdf" },
 ];
 
 const wrap = "mx-auto max-w-6xl px-5 md:px-10";
