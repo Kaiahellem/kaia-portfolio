@@ -30,7 +30,7 @@ export default function Hero() {
     const ctx = gsap.context(() => {
       const counter = { v: 0 };
       name = SplitText.create("[data-name]", { type: "chars", mask: "chars" });
-      lines = SplitText.create("[data-intro]", { type: "lines", mask: "lines", linesClass: "split-line" });
+      lines = SplitText.create("[data-intro] > span", { type: "lines", mask: "lines", linesClass: "split-line" });
       gsap.set(name.chars, { yPercent: 105 });
       gsap.set(lines.lines, { yPercent: 105 });
       gsap.set("[data-fade]", { autoAlpha: 0, y: 12 });

@@ -82,8 +82,8 @@ html.js .loader {
 
 /* SplitText-linjer: unngå at descendere klippes */
 .split-line {
-  padding-bottom: 0.08em;
-  margin-bottom: -0.08em;
+  padding-bottom: 0.15em;
+  margin-bottom: -0.15em;
 }
 
 :focus-visible {
