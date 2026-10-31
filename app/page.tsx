@@ -182,7 +182,7 @@ export default function Home() {
         </div>
         <div className="mt-10 flex justify-between">
           <span>© 2026 Kaia Hellem</span>
-          <span>59°54′N 10°45′E</span>
+          <span>59°52.5′N 10°46.2′E</span>
         </div>
       </footer>
     </main>
