@@ -3,12 +3,6 @@ import HoverImage from "@/components/HoverImage";
 import RevealText from "@/components/RevealText";
 import MelleVisual from "@/components/MelleVisual";
 
-const menu = [
-  { label: "Prosjekter", href: "#prosjekter" },
-  { label: "Om meg", href: "#om-meg" },
-  { label: "Kontakt", href: "#kontakt" },
-];
-
 const about = [
   "Jeg har bakgrunn som IT-konsulent innen kvalitetssikring og testing av store, offentlige systemer. Nå designer og utvikler jeg selv, blant annet i Next.js, TypeScript og Sanity.",
   "Jeg trives best i skjæringspunktet mellom design og kode, og liker å følge et prosjekt fra idé til ferdig produkt. Nå ser jeg etter et frontendteam hvor jeg kan lære, bidra og bygge ting som faktisk blir brukt.",
@@ -26,24 +20,6 @@ export default function Home() {
   return (
     <main>
       <Hero />
-
-      {/* Meny */}
-      <nav aria-label="Seksjoner" className={`${wrap} pb-[72px] md:pb-32`}>
-        <ul>
-          {menu.map((m) => (
-            <li key={m.href} className="border-t border-stone last:border-b">
-              <a href={m.href} className="group flex items-center gap-[14px] py-[18px] md:py-7">
-                <span className="flex-1 font-serif text-[30px] leading-tight transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:translate-x-2 md:text-6xl">
-                  {m.label}
-                </span>
-                <span className="text-lg transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:translate-x-1 group-hover:text-accent">
-                  →
-                </span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
 
       {/* Prosjekter */}
       <section id="prosjekter" className={`${wrap} scroll-mt-10 pb-20 md:pb-40`}>
