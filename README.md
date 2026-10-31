@@ -13,12 +13,9 @@ npm run dev
 
 ## Bilder
 
-De to bildene er plassholdere. Bytt dem ut med ekte bilder med samme filnavn:
-
-- `public/images/havn.jpg` — skjermbilde av HAVN Boligstyling (ca. 1600 × 1088)
-- `public/images/kaia.jpg` — bildet fra Oslofjorden (ca. 1448 × 1236)
-
-Endrer du størrelsen mye, oppdater `width` og `height` i `app/page.tsx`.
+- `public/images/havn-desktop.webp` — hele forsiden til HAVN i 1440 px bredde, vist rullende i skjermtegningen
+- `public/images/havn-mobil.webp` — første skjerm av mobilversjonen, vist i telefontegningen
+- `public/images/kaia.jpg` — bildet fra Oslofjorden (1200 × 1600)
 
 ## Animasjoner
 
@@ -29,6 +26,7 @@ Endrer du størrelsen mye, oppdater `width` og `height` i `app/page.tsx`.
 | Lokal tid | `components/LocalTime.tsx` | Klokke i Oslo-tid nederst på første skjerm (desktop) |
 | Melle-kort | `components/MelleVisual.tsx` | Ordmerke og palett i kode, med reveal ved scroll |
 | Tekst-reveal | `components/RevealText.tsx` | Deler tekst i linjer som glir opp når de scrolles inn (GSAP SplitText + ScrollTrigger) |
+| HAVN-skjerm | `components/HavnMock.tsx` | Skjerm og mobil tegnes med strek, nettsiden ruller inne i skjermen mens du scroller |
 | Bilde | `components/HoverImage.tsx` | Bildet åpner seg og zoomer ut ved scroll, og en etikett følger musepekeren ved hover |
 | Myk scroll | `components/SmoothScroll.tsx` | Lenis, koblet til GSAP sin ticker |
 

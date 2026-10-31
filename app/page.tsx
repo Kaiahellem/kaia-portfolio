@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import HoverImage from "@/components/HoverImage";
 import RevealText from "@/components/RevealText";
 import MelleVisual from "@/components/MelleVisual";
+import HavnMock from "@/components/HavnMock";
 
 const about = [
   "Jeg har bakgrunn som IT-konsulent innen kvalitetssikring og testing av store, offentlige systemer. Nå designer og utvikler jeg selv, blant annet i Next.js, TypeScript og Sanity.",
@@ -25,15 +26,7 @@ export default function Home() {
       <section id="prosjekter" className={`${wrap} scroll-mt-10 pb-20 md:pb-40`}>
         <p className="eyebrow mb-5 md:mb-10">Prosjekter</p>
         <article data-waypoint="project" data-label="HAVN" className="grid gap-5 md:grid-cols-12 md:items-end md:gap-10">
-          <HoverImage
-            src="/images/havn.jpg"
-            alt="Forsiden til HAVN Boligstyling"
-            width={1600}
-            height={1088}
-            href="https://styling.havnbolig.no"
-            cursorLabel="Se nettsiden"
-            className="md:col-span-7"
-          />
+          <HavnMock className="md:col-span-7" />
           <div className="md:col-span-5">
             <div className="flex justify-between text-xs text-muted">
               <span>Kundeprosjekt</span>
@@ -108,8 +101,8 @@ export default function Home() {
             <HoverImage
               src="/images/kaia.jpg"
               alt="Kaia i en båt på Oslofjorden"
-              width={1448}
-              height={1236}
+              width={1200}
+              height={1600}
               sizes="(min-width: 768px) 40vw, 100vw"
             />
             <figcaption className="mt-2 text-[11px] text-muted">Kaia, et sted på Oslofjorden</figcaption>
