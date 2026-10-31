@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
+import CourseLine from "@/components/CourseLine";
 
 export const metadata: Metadata = {
   title: "Kaia Hellem — Design & web",
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#f4f1ec",
+  themeColor: "#1a3391",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -23,7 +24,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <SmoothScroll />
-        {children}
+        <div className="relative">
+          {children}
+          <CourseLine />
+        </div>
       </body>
     </html>
   );

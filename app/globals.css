@@ -6,13 +6,15 @@
 @import "@fontsource/instrument-serif/400-italic.css";
 @import "@fontsource/jetbrains-mono/400.css";
 
-/* Melle-palett: blekk, papir, varm grå + én aksent */
+/* Sjøkart: hvit strek på dyp blå. «paper» er bakgrunnen, «ink» og «accent» er strek og tekst. */
 @theme {
-  --color-ink: #1a1a1a;
-  --color-paper: #f4f1ec;
-  --color-stone: #cfc8bd;
-  --color-muted: #8a8580;
-  --color-accent: #6b1e2a;
+  --color-ink: #ffffff;
+  --color-paper: #1a3391;
+  --color-stone: rgb(255 255 255 / 0.32);
+  --color-muted: rgb(255 255 255 / 0.66);
+  --color-accent: #ffffff;
+  --color-melle: #6b1e2a;
+  --color-melle-paper: #f4f1ec;
 
   --font-serif: "Gloock", Georgia, serif;
   --font-sans: "Inter", system-ui, sans-serif;
@@ -24,7 +26,13 @@
 }
 
 html {
-  background: var(--color-paper);
+  background-color: var(--color-paper);
+  /* Svakt rutenett, som på et sjøkart */
+  background-image:
+    linear-gradient(rgb(255 255 255 / 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 0.05) 1px, transparent 1px);
+  background-size: 80px 80px;
+  background-position: -1px -1px;
   color: var(--color-ink);
   -webkit-font-smoothing: antialiased;
 }

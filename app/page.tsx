@@ -24,7 +24,7 @@ export default function Home() {
       {/* Prosjekter */}
       <section id="prosjekter" className={`${wrap} scroll-mt-10 pb-20 md:pb-40`}>
         <p className="eyebrow mb-5 md:mb-10">Prosjekter</p>
-        <article className="grid gap-5 md:grid-cols-12 md:items-end md:gap-10">
+        <article data-waypoint="project" data-label="HAVN" className="grid gap-5 md:grid-cols-12 md:items-end md:gap-10">
           <HoverImage
             src="/images/havn.jpg"
             alt="Forsiden til HAVN Boligstyling"
@@ -68,7 +68,7 @@ export default function Home() {
         </article>
 
         {/* Melle Studio: tekst til venstre, visuell identitet til høyre på desktop */}
-        <article className="mt-16 grid gap-5 md:mt-32 md:grid-cols-12 md:items-end md:gap-10">
+        <article data-waypoint="project" data-label="MELLE" className="mt-16 grid gap-5 md:mt-32 md:grid-cols-12 md:items-end md:gap-10">
           <MelleVisual className="md:order-2 md:col-span-7" />
           <div className="md:order-1 md:col-span-5">
             <div className="flex justify-between text-xs text-muted">
@@ -97,7 +97,7 @@ export default function Home() {
       </section>
 
       {/* Om meg */}
-      <section id="om-meg" className={`${wrap} scroll-mt-10 pb-20 md:pb-40`}>
+      <section data-waypoint="section" id="om-meg" className={`${wrap} scroll-mt-10 pb-20 md:pb-40`}>
         <p className="eyebrow mb-5 md:mb-10">Om meg</p>
         <RevealText as="h2" className="max-w-4xl font-serif text-2xl leading-[1.25] md:text-5xl md:leading-[1.15]">
           Jeg er Kaia, frontendutvikler og designer i Oslo, med bachelor i frontend- og mobilutvikling fra
@@ -123,11 +123,11 @@ export default function Home() {
       </section>
 
       {/* Kontakt */}
-      <section id="kontakt" className={`${wrap} scroll-mt-10 pb-14`}>
+      <section data-waypoint="end" id="kontakt" className={`${wrap} scroll-mt-10 pb-14`}>
         <p className="eyebrow mb-5 md:mb-10">Kontakt</p>
         <a
           href="mailto:kaia.hellem@gmail.com"
-          className="font-serif text-[clamp(1.875rem,6.4vw,5rem)] leading-[1.1] underline decoration-1 underline-offset-[0.12em] transition-colors hover:text-accent"
+          className="font-serif text-[clamp(1.875rem,6.4vw,5rem)] leading-[1.1] underline decoration-1 underline-offset-[0.12em] transition-colors hover:opacity-70"
         >
           kaia.hellem@gmail.com
         </a>
@@ -151,9 +151,31 @@ export default function Home() {
         </ul>
       </section>
 
-      <footer className={`${wrap} flex justify-between pb-10 pt-6 text-[11px] text-muted`}>
-        <span>© 2026 Kaia Hellem</span>
-        <span>Oslo</span>
+      <footer className={`${wrap} pb-10 pt-10 font-mono text-[11px] uppercase text-muted md:pt-16`}>
+        <div className="max-w-sm">
+          <p className="border-b border-ink pb-2 text-[13px] text-ink">Key</p>
+          <ul className="mt-3 grid grid-cols-2 gap-x-6 gap-y-2">
+            <li className="flex items-center gap-2">
+              <span className="size-3 rounded-full border border-ink" /> Prosjekt
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="w-6 border-t border-dashed border-ink" /> Kurs
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="size-3 rounded-full bg-ink" /> Kaia
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="relative size-3 rounded-full border border-ink">
+                <span className="absolute inset-[3px] rounded-full bg-ink" />
+              </span>{" "}
+              Mål
+            </li>
+          </ul>
+        </div>
+        <div className="mt-10 flex justify-between">
+          <span>© 2026 Kaia Hellem</span>
+          <span>59°54′N 10°45′E</span>
+        </div>
       </footer>
     </main>
   );

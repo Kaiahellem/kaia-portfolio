@@ -107,7 +107,7 @@ export default function Hero() {
       </header>
 
       <section className="px-4 pb-20 pt-24 text-accent md:pb-40 md:pl-[50%] md:pr-7 md:pt-40">
-        <p data-intro className="font-medium leading-[1.05]">
+        <p data-intro data-waypoint-start className="font-medium leading-[1.05]">
           <span className="block text-[36px] tracking-[-0.025em] md:text-[clamp(2.5rem,4.4vw,4rem)]">
             Jeg designer og bygger
           </span>

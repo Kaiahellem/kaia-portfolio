@@ -45,7 +45,7 @@ export default function MelleVisual({ className = "" }: { className?: string }) 
       ref={root}
       role="img"
       aria-label="Melle-ordmerket i papirfarge på bordeaux, med fargepaletten blekk, papir, varm grå og bordeaux"
-      className={`relative aspect-[609/414] overflow-hidden rounded-md bg-accent text-paper ${className}`}
+      className={`relative aspect-[609/414] overflow-hidden rounded-md bg-melle text-melle-paper ${className}`}
     >
       <div className="absolute inset-0 flex items-center justify-center pb-[4%]">
         <span
