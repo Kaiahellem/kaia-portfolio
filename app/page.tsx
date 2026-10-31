@@ -119,6 +119,7 @@ export default function Home() {
               width={1200}
               height={1300}
               sizes="(min-width: 768px) 40vw, 100vw"
+              mono
             />
             <figcaption className="mt-2 text-[11px] text-muted">Kaia, et sted på Oslofjorden</figcaption>
           </figure>

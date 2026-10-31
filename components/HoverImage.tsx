@@ -16,6 +16,8 @@ type Props = {
   cursorLabel?: string;
   sizes?: string;
   className?: string;
+  /** Svart-hvitt, med farge ved hover */
+  mono?: boolean;
 };
 
 // Animasjon 3: bildet åpner seg når det scrolles inn, og en etikett følger musepekeren ved hover.
@@ -28,6 +30,7 @@ export default function HoverImage({
   cursorLabel,
   sizes = "(min-width: 768px) 60vw, 100vw",
   className = "",
+  mono = false,
 }: Props) {
   const wrap = useRef<HTMLDivElement>(null);
   const img = useRef<HTMLDivElement>(null);
@@ -98,7 +101,9 @@ export default function HoverImage({
           width={width}
           height={height}
           sizes={sizes}
-          className="h-auto w-full transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:scale-[1.03]"
+          className={`h-auto w-full transition-[transform,filter] duration-700 ease-[var(--ease-out-expo)] group-hover:scale-[1.03] ${
+            mono ? "brightness-95 contrast-120 grayscale group-hover:brightness-100 group-hover:contrast-100 group-hover:grayscale-0" : ""
+          }`}
         />
       </div>
       {cursorLabel && (
