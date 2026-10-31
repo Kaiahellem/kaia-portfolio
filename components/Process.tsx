@@ -9,32 +9,36 @@ gsap.registerPlugin(ScrollTrigger);
 const steps = [
   {
     n: "01",
+    label: "Forstå",
     title: "Forstå",
     sub: "behovet",
-    text: "Jeg starter med hva siden skal oppnå, hvem den er for og hvilket innhold som finnes.",
+    text: "Jeg starter med å forstå problemet, brukerne og målet med løsningen. Det gir retning for arbeidet videre.",
   },
   {
     n: "02",
-    title: "Design",
-    sub: "i Figma",
-    text: "Skisser og ferdig design for mobil og desktop, før en linje kode blir skrevet.",
+    label: "Design",
+    title: "Utforske og",
+    sub: "designe",
+    text: "Jeg utforsker ideer, skisserer løsninger og jobber med struktur og visuell utforming.",
   },
   {
     n: "03",
-    title: "Bygg",
-    sub: "i kode",
-    text: "Next.js og Sanity, med AI som verktøy. Innholdet kan oppdateres uten utvikler.",
+    label: "Utvikle",
+    title: "Fra design",
+    sub: "til kode",
+    text: "Jeg utvikler løsninger med Next.js, TypeScript og Sanity, og bruker AI-verktøy som en del av utviklingsprosessen for å jobbe smartere, utforske løsninger og effektivisere arbeidet.",
   },
   {
     n: "04",
-    title: "Test",
-    sub: "& lansering",
-    text: "Mobil, ytelse og detaljer sjekkes nøye før siden går live.",
+    label: "Forbedre",
+    title: "Teste og",
+    sub: "finpusse",
+    text: "Jeg tester funksjonalitet, tilgjengelighet og responsivitet, retter feil og justerer detaljer før løsningen er klar.",
   },
 ];
 
 // Høyde per kort på desktop, som trappetrinn. Kortene stiger opp som vannstand mens seksjonen står fast.
-const heights = ["100%", "82%", "64%", "48%"];
+const heights = ["100%", "90%", "80%", "70%"];
 
 export default function Process() {
   const root = useRef<HTMLDivElement>(null);
@@ -86,25 +90,56 @@ export default function Process() {
     return () => mm.revert();
   }, []);
 
+  // Brødteksten får samme høyde i alle kort på desktop, så overskriftene står på én linje
+  useLayoutEffect(() => {
+    const list = root.current?.querySelector("ol");
+    if (!list) return;
+    const texts = Array.from(list.querySelectorAll<HTMLElement>("[data-card-text]"));
+    const desktop = window.matchMedia("(min-width: 768px)");
+
+    const equalize = () => {
+      texts.forEach((t) => (t.style.minHeight = ""));
+      if (!desktop.matches) return;
+      const max = Math.max(...texts.map((t) => t.offsetHeight));
+      texts.forEach((t) => (t.style.minHeight = `${max}px`));
+    };
+
+    equalize();
+    document.fonts?.ready.then(equalize);
+    let width = list.clientWidth;
+    const ro = new ResizeObserver(() => {
+      if (list.clientWidth === width) return;
+      width = list.clientWidth;
+      equalize();
+    });
+    ro.observe(list);
+    desktop.addEventListener("change", equalize);
+    return () => {
+      ro.disconnect();
+      desktop.removeEventListener("change", equalize);
+    };
+  }, []);
+
   return (
     <div ref={root} data-waypoint="section" id="prosess" className="scroll-mt-10 md:pb-24">
       <div ref={pin} className="mx-auto flex max-w-6xl flex-col px-5 pb-20 md:h-svh md:px-10 md:pb-10 md:pt-16">
         <p className="eyebrow mb-5 md:mb-8">Prosess</p>
         <h2 className="max-w-3xl font-serif text-2xl leading-[1.25] md:text-5xl md:leading-[1.15]">
-          Fra første samtale til siden er på nett.
+          Fra idé til ferdig løsning.
         </h2>
 
-        <ol className="mt-8 grid gap-4 md:mt-auto md:h-[58%] md:grid-cols-4 md:items-end md:overflow-hidden md:pt-10">
+        <ol className="mt-8 grid gap-4 md:mt-auto md:h-[68%] md:grid-cols-4 md:items-end md:overflow-hidden md:pt-10">
           {steps.map((s, i) => (
             <li
               key={s.n}
               data-card
-              className="relative flex min-h-56 flex-col justify-between rounded-md bg-ink p-5 text-paper md:h-[var(--h)] md:min-h-0"
+              className="relative flex min-h-56 flex-col justify-between rounded-md bg-ink p-5 text-paper md:h-[var(--h)] md:min-h-fit"
               style={{ "--h": heights[i] } as React.CSSProperties}
             >
               {/* Toppen: stiplet vannlinje og nummer, som på en tidevannsmåler */}
               <div className="flex items-center gap-3 font-mono text-[11px]">
                 <span>{s.n}</span>
+                <span className="uppercase tracking-[0.08em]">{s.label}</span>
                 <span className="flex-1 border-t border-dashed border-paper/50" />
                 <span aria-hidden>▲</span>
               </div>
@@ -122,7 +157,9 @@ export default function Process() {
                   {s.title}
                   <span className="block font-italic text-[1.1em] italic font-normal tracking-[-0.02em]">{s.sub}</span>
                 </h3>
-                <p className="mt-3 text-sm leading-[1.5]">{s.text}</p>
+                <p data-card-text className="mt-3 text-sm leading-[1.5]">
+                  {s.text}
+                </p>
               </div>
             </li>
           ))}
