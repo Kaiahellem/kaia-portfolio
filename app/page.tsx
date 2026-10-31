@@ -13,6 +13,8 @@ const about = [
   "Utenfor skjermen finner du meg helst på sjøen, gjerne med seilbåten min i Oslofjorden.",
 ];
 
+const tools = ["TypeScript", "React", "Next.js", "Tailwind CSS", "GSAP", "Sanity", "Figma", "Git", "Vercel"];
+
 const links = [
   { label: "GitHub", text: "github.com/Kaiahellem", href: "https://github.com/Kaiahellem" },
   { label: "LinkedIn", text: "linkedin.com/in/kaiahellem", href: "https://www.linkedin.com/in/kaiahellem/" },
@@ -50,7 +52,7 @@ export default function Home() {
               HAVN Boligstyling
             </RevealText>
             <RevealText className="mt-[10px] text-[15px] leading-[1.5] md:text-base">
-              Nettside for boligstylist. Design, utvikling og CMS kunden oppdaterer selv.
+              Nettside for en boligstylist, som viser frem prosjektene og gjør det enkelt å bestille befaring. Jeg designet siden i Figma og bygget den med Next.js, TypeScript og Tailwind. Med Sanity som CMS legger kunden selv inn nye prosjekter, tjenester og tekster.
             </RevealText>
             <dl className="mt-5 grid grid-cols-2 gap-4 border-t border-stone pt-[14px]">
               <div>
@@ -145,6 +147,14 @@ export default function Home() {
             {about.map((p) => (
               <RevealText key={p.slice(0, 20)}>{p}</RevealText>
             ))}
+            <div className="!mt-8 border-t border-stone pt-4 md:!mt-12">
+              <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-muted">Verktøy jeg bruker</p>
+              <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[15px] md:text-base">
+                {tools.map((t) => (
+                  <li key={t}>{t}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>

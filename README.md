@@ -15,7 +15,7 @@ npm run dev
 
 - `public/images/havn-desktop.webp` — hele forsiden til HAVN i 1440 px bredde, vist rullende i skjermtegningen
 - `public/images/havn-mobil.webp` — første skjerm av mobilversjonen, vist i telefontegningen
-- `public/images/kaia.jpg` — bildet fra Oslofjorden (1200 × 1600)
+- `public/images/kaia.jpg` — bildet fra Oslofjorden (1200 × 1300), vist i svart-hvitt med farge ved hover
 
 ## CV
 
