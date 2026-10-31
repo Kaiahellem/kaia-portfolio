@@ -23,14 +23,18 @@ export default function Hero() {
 
   useLayoutEffect(() => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce || !root.current) return;
+    // Animer bare når loaderen faktisk vises. Ellers ville navnet og menyen vært skjult
+    // i flere sekunder mens resten av siden (som HAVN) allerede er synlig.
+    const loaderShown = !!loader.current && getComputedStyle(loader.current).display !== "none";
+    if (reduce || !loaderShown || !root.current) return;
 
     let name: SplitText | undefined;
     let lines: SplitText | undefined;
     const ctx = gsap.context(() => {
       const counter = { v: 0 };
       name = SplitText.create("[data-name]", { type: "chars", mask: "chars" });
-      lines = SplitText.create("[data-intro] > span", { type: "lines", mask: "lines", linesClass: "split-line" });
+      // Hele linjer holder ordene samlet, så skjermlesere kan lese dem direkte. Ingen aria-label på <span>.
+      lines = SplitText.create("[data-intro] > span", { type: "lines", mask: "lines", linesClass: "split-line", aria: "none" });
       gsap.set(name.chars, { yPercent: 105 });
       gsap.set(lines.lines, { yPercent: 105 });
       gsap.set("[data-fade]", { autoAlpha: 0, y: 12 });

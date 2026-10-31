@@ -27,6 +27,8 @@ export default function RevealText({ as: Tag = "p", className, children, id }: P
         type: "lines",
         mask: "lines",
         linesClass: "split-line",
+        // Hele linjer holder ordene samlet, så skjermlesere leser teksten direkte. aria-label er ikke lov på <p>.
+        aria: "none",
         autoSplit: true,
         onSplit: (self) =>
           gsap.from(self.lines, {

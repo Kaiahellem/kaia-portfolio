@@ -50,7 +50,7 @@ function ColorView() {
           style={{ background: p.hex, color: p.text }}
         >
           <span className="font-melle text-[3.4cqw] leading-none">{p.name}</span>
-          <span className="text-[max(9px,1.75cqw)] leading-tight opacity-75">
+          <span className="text-[max(9px,1.75cqw)] leading-tight opacity-90">
             {p.hex}
             <span className="hidden @md:inline">
               <br />
@@ -64,7 +64,7 @@ function ColorView() {
 }
 
 function TypeView() {
-  const label = "w-[22%] shrink-0 text-[max(8px,1.6cqw)] uppercase tracking-[0.12em] opacity-60";
+  const label = "w-[22%] shrink-0 text-[max(8px,1.6cqw)] uppercase tracking-[0.12em] opacity-70";
   return (
     <div className="flex h-full flex-col justify-center gap-[2.2cqw] px-[6cqw]" style={{ background: c.papir, color: c.blekk }}>
       {[
