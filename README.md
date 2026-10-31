@@ -27,6 +27,7 @@ npm run dev
 | Melle-kort | `components/MelleVisual.tsx` | Ordmerke og palett i kode, med reveal ved scroll |
 | Tekst-reveal | `components/RevealText.tsx` | Deler tekst i linjer som glir opp når de scrolles inn (GSAP SplitText + ScrollTrigger) |
 | HAVN-skjerm | `components/HavnMock.tsx` | Skjerm og mobil tegnes med strek, nettsiden ruller inne i skjermen mens du scroller |
+| Prosess | `components/Process.tsx` | Seksjonen låses på desktop, og fire hvite kort stiger opp som vannstand mens du scroller. På mobil glir kortene inn hver for seg |
 | Bilde | `components/HoverImage.tsx` | Bildet åpner seg og zoomer ut ved scroll, og en etikett følger musepekeren ved hover |
 | Myk scroll | `components/SmoothScroll.tsx` | Lenis, koblet til GSAP sin ticker |
 

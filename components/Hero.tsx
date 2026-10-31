@@ -9,6 +9,7 @@ gsap.registerPlugin(SplitText);
 
 const nav = [
   { label: "Prosjekter", href: "#prosjekter" },
+  { label: "Prosess", href: "#prosess" },
   { label: "Om meg", href: "#om-meg" },
   { label: "Kontakt", href: "#kontakt" },
 ];

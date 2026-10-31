@@ -3,6 +3,7 @@ import HoverImage from "@/components/HoverImage";
 import RevealText from "@/components/RevealText";
 import MelleVisual from "@/components/MelleVisual";
 import HavnMock from "@/components/HavnMock";
+import Process from "@/components/Process";
 
 const about = [
   "Jeg liker å utforske ideer og gjøre dem om til gjennomtenkte uttrykk og digitale opplevelser. Fra de første skissene og valg av farger og typografi, til design og utvikling av nettsider. Jeg trives best når jeg får kombinere det visuelle med det tekniske, og følge et prosjekt hele veien fra idé til ferdig produkt.",
@@ -99,6 +100,9 @@ export default function Home() {
           </div>
         </article>
       </section>
+
+      {/* Prosess */}
+      <Process />
 
       {/* Om meg */}
       <section data-waypoint="section" id="om-meg" className={`${wrap} scroll-mt-10 pb-20 md:pb-40`}>
