@@ -70,15 +70,22 @@ html.lenis body {
   color: var(--color-accent);
 }
 
-/* Loaderen vises bare når JS kjører og brukeren ikke har bedt om mindre bevegelse */
+/* Loaderen vises som standard. Den skjules når brukeren har bedt om mindre bevegelse,
+   og av <noscript> i layout.tsx når JavaScript er slått av. Den er ikke avhengig av en klasse
+   på <html>, som kan forsvinne hvis React må tegne siden på nytt (f.eks. i Safari på iPhone). */
 .loader {
-  display: none;
-}
-html.js .loader {
   display: flex;
+  /* Sikkerhetsnett: skulle animasjonen aldri starte, forsvinner loaderen likevel etter 8 sekunder */
+  animation: loader-failsafe 0s linear 8s forwards;
+}
+@keyframes loader-failsafe {
+  to {
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
-  html.js .loader {
+  .loader {
     display: none;
   }
 }

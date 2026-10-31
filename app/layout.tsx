@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "Kaia Hellem — Design & web",
   description,
   robots: { index: false, follow: false },
+  // Safari på iPhone gjør ellers tall, datoer og adresser om til lenker. Det endrer siden før React
+  // starter, og kan få React til å tegne alt på nytt midt i loaderen.
+  formatDetection: { telephone: false, date: false, email: false, address: false },
   openGraph: {
     title: "Kaia Hellem — Frontendutvikler & designer",
     description,
@@ -33,10 +36,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="no" suppressHydrationWarning>
       <head>
-        {/* Merker at JS kjører, så loaderen kan vises uten å blokkere siden uten JS */}
-        <script
-          dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }}
-        />
+        {/* Uten JavaScript kjører aldri animasjonen som fjerner loaderen, så da skjules den */}
+        <noscript>
+          <style>{".loader{display:none!important}"}</style>
+        </noscript>
       </head>
       <body>
         <SmoothScroll />
