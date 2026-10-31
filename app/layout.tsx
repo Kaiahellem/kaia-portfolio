@@ -9,6 +9,7 @@ const description =
 export const metadata: Metadata = {
   title: "Kaia Hellem — Design & web",
   description,
+  robots: { index: false, follow: false },
   openGraph: {
     title: "Kaia Hellem — Frontendutvikler & designer",
     description,
