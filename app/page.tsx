@@ -102,7 +102,7 @@ export default function Home() {
               src="/images/kaia.jpg"
               alt="Kaia i en båt på Oslofjorden"
               width={1200}
-              height={1600}
+              height={1300}
               sizes="(min-width: 768px) 40vw, 100vw"
             />
             <figcaption className="mt-2 text-[11px] text-muted">Kaia, et sted på Oslofjorden</figcaption>
