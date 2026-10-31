@@ -3,10 +3,24 @@ import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import CourseLine from "@/components/CourseLine";
 
+const description =
+  "Kaia Hellem designer og bygger merkevare og nettsider. Frontendutvikler og designer i Oslo.";
+
 export const metadata: Metadata = {
   title: "Kaia Hellem — Design & web",
-  description:
-    "Kaia Hellem designer og bygger merkevare og nettsider. Frontendutvikler og designer i Oslo.",
+  description,
+  openGraph: {
+    title: "Kaia Hellem — Frontendutvikler & designer",
+    description,
+    siteName: "Kaia Hellem",
+    locale: "nb_NO",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kaia Hellem — Frontendutvikler & designer",
+    description,
+  },
 };
 
 export const viewport: Viewport = {

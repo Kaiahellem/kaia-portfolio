@@ -8,6 +8,8 @@ import Process from "@/components/Process";
 const about = [
   "Jeg liker å utforske ideer og gjøre dem om til gjennomtenkte uttrykk og digitale opplevelser. Fra de første skissene og valg av farger og typografi, til design og utvikling av nettsider. Jeg trives best når jeg får kombinere det visuelle med det tekniske, og følge et prosjekt hele veien fra idé til ferdig produkt.",
   "Jeg er opptatt av å lage ting som både ser bra ut, fungerer godt og gir verdi for dem som bruker dem.",
+  "Jeg har også erfaring med testing og kvalitetssikring av komplekse løsninger, noe som har gitt meg et godt blikk for detaljer, brukervennlighet og kvalitet.",
+  "Nå ser jeg etter en rolle som frontendutvikler, gjerne i et lite, tverrfaglig team hvor jeg kan lære av andre, bidra med egne ideer og være med på å bygge gode produkter.",
   "Utenfor skjermen finner du meg helst på sjøen, gjerne med seilbåten min i Oslofjorden.",
 ];
 
@@ -15,6 +17,16 @@ const links = [
   { label: "GitHub", text: "github.com/Kaiahellem", href: "https://github.com/Kaiahellem" },
   { label: "LinkedIn", text: "linkedin.com/in/kaiahellem", href: "https://www.linkedin.com/in/kaiahellem/" },
   { label: "CV", text: "Last ned PDF", href: "/cv/Kaia-Hellem-CV.pdf" },
+  {
+    label: "Kildekode",
+    text: "github.com/Kaiahellem/kaia-portfolio",
+    href: "https://github.com/Kaiahellem/kaia-portfolio",
+  },
+];
+
+const havnLinks = [
+  { label: "Se nettsiden", href: "https://styling.havnbolig.no" },
+  { label: "Se koden", href: "https://github.com/Kaiahellem/havn-boligstyling" },
 ];
 
 const wrap = "mx-auto max-w-6xl px-5 md:px-10";
@@ -50,21 +62,26 @@ export default function Home() {
                 <dd className="mt-1 text-[13px]">Figma, Next.js, Sanity</dd>
               </div>
             </dl>
-            <a
-              href="https://styling.havnbolig.no"
-              target="_blank"
-              rel="noreferrer"
-              className="group mt-5 inline-block text-[13px] font-medium text-accent underline underline-offset-4"
-            >
-              Se nettsiden{" "}
-              <span
-                aria-hidden
-                className="inline-block transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-              >
-                ↗
-              </span>
-              <span className="sr-only"> (åpnes i ny fane)</span>
-            </a>
+            <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2">
+              {havnLinks.map((l) => (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group inline-block text-[13px] font-medium text-accent underline underline-offset-4"
+                >
+                  {l.label}{" "}
+                  <span
+                    aria-hidden
+                    className="inline-block transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  >
+                    ↗
+                  </span>
+                  <span className="sr-only"> (åpnes i ny fane)</span>
+                </a>
+              ))}
+            </div>
           </div>
         </article>
 
@@ -163,7 +180,7 @@ export default function Home() {
 
       <footer className={`${wrap} pb-10 pt-10 font-mono text-[11px] uppercase text-muted md:pt-16`}>
         <div className="max-w-sm">
-          <p className="border-b border-ink pb-2 text-[13px] text-ink">Key</p>
+          <p className="border-b border-ink pb-2 text-[13px] text-ink">Tegnforklaring</p>
           <ul className="mt-3 grid grid-cols-2 gap-x-6 gap-y-2">
             <li className="flex items-center gap-2">
               <span className="size-3 rounded-full border border-ink" /> Prosjekt
