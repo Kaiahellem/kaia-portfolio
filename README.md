@@ -1,6 +1,6 @@
 # Kaia Hellem — portefølje
 
-Porteføljeside bygget fra Figma-designene «Desktop – Portefølje» og «iPhone 17 – Portefølje», i Melle-paletten (blekk, papir, varm grå og bordeaux). Fonter: Anton (navnet), Instrument Serif kursiv, Gloock, Inter og JetBrains Mono.
+Porteføljeside bygget fra Figma-designene «Desktop – Portefølje» og «iPhone 17 – Portefølje», i sjøkart-stil: hvit strek på blå (#1A3391) med et svakt rutenett. Melle-kortet beholder Melle sin bordeaux. Fonter: Anton (navnet), Instrument Serif kursiv, Gloock, Inter og JetBrains Mono.
 
 ## Kom i gang
 
@@ -25,6 +25,7 @@ Endrer du størrelsen mye, oppdater `width` og `height` i `app/page.tsx`.
 | Animasjon | Fil | Hva den gjør |
 | --- | --- | --- |
 | Loader | `components/Hero.tsx` | Teller til 100, glir opp, og navnet reiser seg bokstav for bokstav |
+| Kurslinje | `components/CourseLine.tsx` | Stiplet kurs som tegnes nedover siden mens man scroller, med veipunkter ved prosjektene (nettbrett og desktop) |
 | Lokal tid | `components/LocalTime.tsx` | Klokke i Oslo-tid nederst på første skjerm (desktop) |
 | Melle-kort | `components/MelleVisual.tsx` | Ordmerke og palett i kode, med reveal ved scroll |
 | Tekst-reveal | `components/RevealText.tsx` | Deler tekst i linjer som glir opp når de scrolles inn (GSAP SplitText + ScrollTrigger) |
