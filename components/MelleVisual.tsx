@@ -49,7 +49,7 @@ function ColorView() {
           className="flex flex-col justify-end gap-[0.6cqw] p-[2.4cqw]"
           style={{ background: p.hex, color: p.text }}
         >
-          <span className="font-serif text-[3.4cqw] leading-none">{p.name}</span>
+          <span className="font-melle text-[3.4cqw] leading-none">{p.name}</span>
           <span className="text-[max(9px,1.75cqw)] leading-tight opacity-75">
             {p.hex}
             <span className="hidden @md:inline">
@@ -74,7 +74,7 @@ function TypeView() {
       ].map((t) => (
         <div key={t.spec} className="flex items-baseline gap-[2cqw]">
           <span className={label}>{t.spec}</span>
-          <span className="truncate font-serif leading-[1.05]" style={{ fontSize: t.size }}>
+          <span className="truncate font-melle leading-[1.05]" style={{ fontSize: t.size }}>
             {t.text}
           </span>
         </div>

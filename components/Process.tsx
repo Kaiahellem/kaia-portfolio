@@ -124,7 +124,7 @@ export default function Process() {
     <div ref={root} data-waypoint="section" id="prosess" className="scroll-mt-10 md:pb-24">
       <div ref={pin} className="mx-auto flex max-w-6xl flex-col px-5 pb-20 md:h-svh md:px-10 md:pb-10 md:pt-16">
         <p className="eyebrow mb-5 md:mb-8">Prosess</p>
-        <h2 className="max-w-3xl font-serif text-2xl leading-[1.25] md:text-5xl md:leading-[1.15]">
+        <h2 className="max-w-3xl font-serif text-[27px] leading-[1.18] md:text-[52px] md:leading-[1.1]">
           Fra idé til ferdig løsning.
         </h2>
 

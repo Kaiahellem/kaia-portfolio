@@ -48,7 +48,7 @@ export default function Home() {
               <span>Kundeprosjekt</span>
               <span>2026</span>
             </div>
-            <RevealText as="h2" className="mt-5 font-serif text-[38px] leading-[1.05] md:text-6xl">
+            <RevealText as="h2" className="mt-5 font-serif text-[40px] leading-[1.02] md:text-[64px]">
               HAVN Boligstyling
             </RevealText>
             <RevealText className="mt-[10px] text-[15px] leading-[1.5] md:text-base">
@@ -101,7 +101,7 @@ export default function Home() {
                 Pågår
               </span>
             </div>
-            <RevealText as="h2" className="mt-5 font-serif text-[38px] leading-[1.05] md:text-6xl">
+            <RevealText as="h2" className="mt-5 font-serif text-[40px] leading-[1.02] md:text-[64px]">
               Melle Studio
             </RevealText>
             <RevealText className="mt-[10px] text-[15px] leading-[1.5] md:text-base">
@@ -127,7 +127,7 @@ export default function Home() {
       {/* Om meg */}
       <section data-waypoint="section" id="om-meg" className={`${wrap} scroll-mt-10 pb-20 md:pb-40`}>
         <p className="eyebrow mb-5 md:mb-10">Om meg</p>
-        <RevealText as="h2" className="max-w-4xl font-serif text-2xl leading-[1.25] md:text-5xl md:leading-[1.15]">
+        <RevealText as="h2" className="max-w-4xl font-serif text-[27px] leading-[1.18] md:text-[52px] md:leading-[1.1]">
           Hei, jeg er Kaia! Frontendutvikler og designer i Oslo som liker å gjøre ideer om til digitale
           opplevelser.
         </RevealText>
@@ -164,7 +164,7 @@ export default function Home() {
         <p className="eyebrow mb-5 md:mb-10">Kontakt</p>
         <a
           href="mailto:kaia.hellem@gmail.com"
-          className="font-serif text-[clamp(1.875rem,6.4vw,5rem)] leading-[1.1] underline decoration-1 underline-offset-[0.12em] transition-colors hover:opacity-70"
+          className="font-serif text-[clamp(2rem,6.9vw,5.25rem)] leading-[1.1] underline decoration-1 underline-offset-[0.12em] transition-colors hover:opacity-70"
         >
           kaia.hellem@gmail.com
         </a>

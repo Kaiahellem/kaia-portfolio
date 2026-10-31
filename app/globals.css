@@ -3,6 +3,7 @@
 @import "@fontsource/inter/400.css";
 @import "@fontsource/inter/500.css";
 @import "@fontsource/anton/400.css";
+@import "@fontsource-variable/newsreader/opsz.css";
 @import "@fontsource/instrument-serif/400-italic.css";
 @import "@fontsource/jetbrains-mono/400.css";
 
@@ -16,7 +17,9 @@
   --color-melle: #6b1e2a;
   --color-melle-paper: #f4f1ec;
 
-  --font-serif: "Gloock", Georgia, serif;
+  --font-serif: "Newsreader Variable", Georgia, serif;
+  /* Gloock hører til Melle-identiteten og brukes bare inne i Melle-kortet */
+  --font-melle: "Gloock", Georgia, serif;
   --font-sans: "Inter", system-ui, sans-serif;
   --font-display: "Anton", Impact, sans-serif;
   --font-italic: "Instrument Serif", Georgia, serif;
@@ -99,4 +102,10 @@ html.js .loader {
   to {
     transform: scaleX(1);
   }
+}
+
+/* Newsreader: litt tyngre og tettere i overskrifter, så den står like godt som en display-font */
+.font-serif {
+  font-weight: 500;
+  letter-spacing: -0.02em;
 }
