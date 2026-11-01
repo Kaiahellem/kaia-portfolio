@@ -157,12 +157,16 @@ export default function Home() {
           </div>
         </article>
 
-        {/* Melle Studio: visuell identitet til venstre, tekst til høyre på desktop */}
-        <article data-waypoint="project" data-label="MELLE" className="mt-16 grid gap-5 md:mt-32 md:grid-cols-12 md:items-end md:gap-10">
-          <MelleVisual className="md:col-span-7" />
-          <div className="md:col-span-5">
+        {/* Melle Studio: sideprosjekt, vist som en mindre flis */}
+        <article
+          data-waypoint="project"
+          data-label="MELLE"
+          className="mt-16 grid gap-5 border-t border-stone pt-8 md:mt-28 md:grid-cols-12 md:items-center md:gap-10 md:pt-10"
+        >
+          <MelleVisual className="md:col-span-4" />
+          <div className="md:col-span-5 md:col-start-6">
             <div className="flex justify-between text-xs text-muted">
-              <span>Selvinitiert</span>
+              <span>Sideprosjekt · Identitet</span>
               <span className="flex items-center gap-2">
                 <span aria-hidden className="relative flex size-2">
                   <span className="absolute inset-0 animate-ping bg-current opacity-60 motion-reduce:hidden" />
@@ -171,7 +175,7 @@ export default function Home() {
                 Pågår
               </span>
             </div>
-            <RevealText as="h2" className="mt-5 font-serif text-[40px] leading-[1.02] md:text-[64px]">
+            <RevealText as="h2" className="mt-4 font-serif text-[32px] leading-[1.05] md:text-[40px]">
               Melle Studio
             </RevealText>
             <RevealText className="mt-[10px] text-[15px] leading-[1.5] md:text-base">
