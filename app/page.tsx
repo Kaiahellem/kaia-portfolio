@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Hero from "@/components/Hero";
 import HoverImage from "@/components/HoverImage";
 import RevealText from "@/components/RevealText";
@@ -67,6 +68,15 @@ export default function Home() {
               </div>
             </dl>
             <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2">
+              <Link
+                href="/prosjekter/havn"
+                className="group inline-block text-[13px] font-medium text-accent underline underline-offset-4"
+              >
+                Les casen{" "}
+                <span aria-hidden className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                  →
+                </span>
+              </Link>
               {havnLinks.map((l) => (
                 <a
                   key={l.href}
@@ -116,6 +126,15 @@ export default function Home() {
               </div>
             </dl>
             <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2">
+              <Link
+                href="/prosjekter/portal"
+                className="group inline-block text-[13px] font-medium text-accent underline underline-offset-4"
+              >
+                Les casen{" "}
+                <span aria-hidden className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                  →
+                </span>
+              </Link>
               {portalLinks.map((l) => (
                 <a
                   key={l.href}
