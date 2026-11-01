@@ -12,6 +12,7 @@ const meta = "2 år i Capgemini · BSc Frontend- og mobilutvikling · Åpen for 
 const nav = [
   { label: "Prosjekter", href: "#prosjekter" },
   { label: "Prosess", href: "#prosess" },
+  { label: "Erfaring", href: "#erfaring" },
   { label: "Om meg", href: "#om-meg" },
   { label: "Kontakt", href: "#kontakt" },
 ];
@@ -91,7 +92,7 @@ export default function Hero() {
             Frontendutvikler &amp; designer, Oslo
           </p>
           <div className="flex flex-col gap-3 md:flex-row md:items-baseline md:justify-between">
-            <nav data-fade aria-label="Hovedmeny" className="flex gap-4 text-[15px] md:text-[19px]">
+            <nav data-fade aria-label="Hovedmeny" className="flex flex-wrap gap-x-3 gap-y-1 text-[15px] md:gap-x-4 md:text-[19px]">
               {nav.map((n) => (
                 <a
                   key={n.href}

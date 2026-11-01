@@ -5,6 +5,7 @@ import MelleVisual from "@/components/MelleVisual";
 import HavnMock from "@/components/HavnMock";
 import PortalMock from "@/components/PortalMock";
 import Process from "@/components/Process";
+import Experience from "@/components/Experience";
 
 const about = [
   "Jeg liker å utforske ideer og gjøre dem om til gjennomtenkte uttrykk og digitale opplevelser. Fra de første skissene og valg av farger og typografi, til design og utvikling av nettsider. Jeg trives best når jeg får kombinere det visuelle med det tekniske, og følge et prosjekt hele veien fra idé til ferdig produkt.",
@@ -175,6 +176,9 @@ export default function Home() {
 
       {/* Prosess */}
       <Process />
+
+      {/* Erfaring */}
+      <Experience className={`${wrap} pb-20 md:pb-40`} />
 
       {/* Om meg */}
       <section data-waypoint="section" id="om-meg" className={`${wrap} scroll-mt-10 pb-20 md:pb-40`}>
