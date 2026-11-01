@@ -160,7 +160,9 @@ export default async function CasePage({ params }: { params: Promise<{ slug: str
 
       <nav aria-label="Flere caser" className={`${wrap} mt-20 flex flex-col gap-6 border-t border-stone pt-8 md:mt-28 md:flex-row md:items-end md:justify-between`}>
         <Link href={`/prosjekter/${next.slug}`} className="group block">
-          <span className="font-mono text-[13px] uppercase tracking-[0.06em] text-muted">Neste case</span>
+          <span className="font-mono text-[13px] uppercase tracking-[0.06em] text-muted">
+            Neste case<span className="sr-only">: </span>
+          </span>
           <span data-waypoint="end" className="mt-2 block font-serif text-[36px] leading-none md:text-[56px]">
             {next.title} <Arrow d="→" />
           </span>

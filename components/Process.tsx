@@ -53,7 +53,8 @@ export default function Process() {
       const cards = gsap.utils.toArray<HTMLElement>("[data-card]");
       const inner = gsap.utils.toArray<HTMLElement>("[data-card-inner]");
       gsap.set(cards, { yPercent: 101 });
-      gsap.set(inner, { autoAlpha: 0, y: 16 });
+      // opacity, ikke autoAlpha: teksten må bli i tilgjengelighetstreet selv før kortet har steget opp
+      gsap.set(inner, { opacity: 0, y: 16 });
 
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -68,7 +69,7 @@ export default function Process() {
       cards.forEach((card, i) => {
         tl.to(card, { yPercent: 0, ease: "power2.out", duration: 1 }, i * 0.55).to(
           inner[i],
-          { autoAlpha: 1, y: 0, duration: 0.5 },
+          { opacity: 1, y: 0, duration: 0.5 },
           i * 0.55 + 0.6,
         );
       });

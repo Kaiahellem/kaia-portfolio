@@ -253,11 +253,18 @@ export default function Home() {
                 rel="noreferrer"
                 className="group flex items-center gap-3 py-4 md:py-6"
               >
-                <span className="flex-1 text-sm font-medium md:text-base">{l.label}</span>
+                <span className="flex-1 text-sm font-medium md:text-base">
+                  {l.label}
+                  <span className="sr-only">: </span>
+                </span>
                 <span className="text-[13px] text-muted transition-colors group-hover:text-ink">{l.text}</span>
-                <span className="text-sm text-accent transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+                <span
+                  aria-hidden
+                  className="text-sm text-accent transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                >
                   ↗
                 </span>
+                <span className="sr-only"> (åpnes i ny fane)</span>
               </a>
             </li>
           ))}

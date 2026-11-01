@@ -67,15 +67,13 @@ export default function HavnMock({ className = "" }: { className?: string }) {
       ref={root}
       className={`relative ${className}`}
       style={{ aspectRatio: `${VB.w} / ${VB.h}` }}
-      role="img"
-      aria-label="HAVN Boligstyling vist på en skjerm og en mobil, tegnet med hvit strek"
     >
       {/* Skjerminnhold: hele forsiden, som ruller */}
       <div className="absolute overflow-hidden bg-[#e9e1d8]" style={pct(screen)}>
         <div ref={page} data-shot className="will-change-transform">
           <Image
             src="/images/havn-desktop.webp"
-            alt=""
+            alt="HAVN Boligstyling forside på desktop, med prosjektgalleri og knapp for å bestille befaring"
             width={1440}
             height={4925}
             sizes="(min-width: 768px) 55vw, 90vw"
@@ -120,7 +118,7 @@ export default function HavnMock({ className = "" }: { className?: string }) {
         <div data-shot className="h-full">
           <Image
             src="/images/havn-mobil.webp"
-            alt=""
+            alt="HAVN Boligstyling på mobil: prosjektsiden med bilder fra Storgata 27 i Drøbak"
             width={786}
             height={1704}
             sizes="(min-width: 768px) 12vw, 20vw"

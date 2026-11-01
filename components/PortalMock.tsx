@@ -49,15 +49,13 @@ export default function PortalMock({ className = "" }: { className?: string }) {
       ref={root}
       className={`relative ${className}`}
       style={{ aspectRatio: `${VB.w} / ${VB.h}` }}
-      role="img"
-      aria-label="Portal vist på en bærbar PC med adminsiden og en mobil med kundesiden, tegnet med hvit strek"
     >
       {/* Adminsiden på den bærbare */}
       <div className="absolute overflow-hidden bg-[#f7f7f8]" style={pct(screen)}>
         <div data-shot className="h-full">
           <Image
             src="/images/portal-admin.webp"
-            alt=""
+            alt="Portal adminside på desktop: prosjektet «Nettside» med faser, steg og prosjektinnstillinger (demodata)"
             width={1440}
             height={900}
             sizes="(min-width: 768px) 50vw, 90vw"
@@ -95,7 +93,7 @@ export default function PortalMock({ className = "" }: { className?: string }) {
         <div data-shot className="h-full">
           <Image
             src="/images/portal-kunde.webp"
-            alt=""
+            alt="Portal kundeside på mobil: oversikt over prosjektet «Ny nettside» med status, fase og neste steg (demodata)"
             width={390}
             height={844}
             sizes="(min-width: 768px) 12vw, 20vw"
