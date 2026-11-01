@@ -8,11 +8,9 @@ import Process from "@/components/Process";
 import Experience from "@/components/Experience";
 
 const about = [
-  "Jeg liker å utforske ideer og gjøre dem om til gjennomtenkte uttrykk og digitale opplevelser. Fra de første skissene og valg av farger og typografi, til design og utvikling av nettsider. Jeg trives best når jeg får kombinere det visuelle med det tekniske, og følge et prosjekt hele veien fra idé til ferdig produkt.",
-  "Jeg er opptatt av å lage ting som både ser bra ut, fungerer godt og gir verdi for dem som bruker dem.",
-  "Jeg har også erfaring med testing og kvalitetssikring av komplekse løsninger, noe som har gitt meg et godt blikk for detaljer, brukervennlighet og kvalitet.",
-  "Nå ser jeg etter en rolle som frontendutvikler, gjerne i et lite, tverrfaglig team hvor jeg kan lære av andre, bidra med egne ideer og være med på å bygge gode produkter.",
-  "Utenfor skjermen finner du meg helst på sjøen, gjerne med seilbåten min i Oslofjorden.",
+  "Etter bacheloren har jeg jobbet to år som konsulent i Capgemini, i et smidig team på Udirs nasjonale eksamenssystemer. Det jeg likte best var å forstå hvordan løsningen var bygget og å jobbe tett med utviklerne. Nå vil jeg bygge selv, og på fritiden har jeg designet og utviklet både kundeprosjekter og egne verktøy.",
+  "Jeg trives best i et lite, tverrfaglig team der jeg kan jobbe med både design og kode.",
+  "Utenfor skjermen er jeg på Oslofjorden i seilbåten min. Derav sjøkartet.",
 ];
 
 const tools = ["TypeScript", "React", "Next.js", "Tailwind CSS", "GSAP", "Sanity", "Figma", "Git", "Vercel"];
@@ -184,8 +182,7 @@ export default function Home() {
       <section data-waypoint="section" id="om-meg" className={`${wrap} scroll-mt-10 pb-20 md:pb-40`}>
         <p className="eyebrow mb-5 md:mb-10">Om meg</p>
         <RevealText as="h2" className="max-w-4xl font-serif text-[27px] leading-[1.18] md:text-[52px] md:leading-[1.1]">
-          Hei, jeg er Kaia! Frontendutvikler og designer i Oslo som liker å gjøre ideer om til digitale
-          opplevelser.
+          Hei, jeg er Kaia! Frontendutvikler og designer i Oslo.
         </RevealText>
         <div className="mt-5 grid gap-5 md:mt-16 md:grid-cols-12 md:gap-10">
           <figure className="md:col-span-5">
