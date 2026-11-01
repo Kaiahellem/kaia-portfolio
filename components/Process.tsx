@@ -12,28 +12,28 @@ const steps = [
     label: "Forstå",
     title: "Forstå",
     sub: "behovet",
-    text: "Jeg starter med å forstå problemet, brukerne og målet med løsningen. Det gir retning for arbeidet videre.",
+    text: "[FYLL INN: hvordan jeg startet HAVN, f.eks. møte med kunden og innholdsliste]",
   },
   {
     n: "02",
     label: "Design",
     title: "Utforske og",
     sub: "designe",
-    text: "Jeg utforsker ideer, skisserer løsninger og jobber med struktur og visuell utforming.",
+    text: "Jeg skisserer sider og komponenter i Figma, og bestemmer fargepalett og typografi før jeg skriver kode.",
   },
   {
     n: "03",
     label: "Utvikle",
     title: "Fra design",
     sub: "til kode",
-    text: "Jeg utvikler løsninger med Next.js, TypeScript og Sanity, og bruker AI-verktøy som en del av utviklingsprosessen for å jobbe smartere, utforske løsninger og effektivisere arbeidet.",
+    text: "Jeg bygger i Next.js, TypeScript og Sanity, og bruker Claude Code til implementering. Struktur, datamodell og designvalg eier jeg selv.",
   },
   {
     n: "04",
     label: "Forbedre",
-    title: "Teste og",
-    sub: "finpusse",
-    text: "Jeg tester funksjonalitet, tilgjengelighet og responsivitet, retter feil og justerer detaljer før løsningen er klar.",
+    title: "Finpusse og",
+    sub: "forbedre",
+    text: "Semantisk HTML, tastaturnavigasjon og automatiske tilgjengelighetssjekker med axe i Playwright. Til slutt prøver jeg alt på en ekte mobil.",
   },
 ];
 
@@ -154,7 +154,8 @@ export default function Process() {
 
               <div data-card-inner className="mt-10">
                 <h3 className="text-[26px] font-medium leading-[1.05] tracking-[-0.02em] md:text-[clamp(1.5rem,2.2vw,2rem)]">
-                  {s.title}
+                  {s.title}{" "}
+                  {/* Mellomrommet gjør at skjermlesere ikke leser «Forståbehovet» */}
                   <span className="block font-italic text-[1.1em] italic font-normal tracking-[-0.02em]">{s.sub}</span>
                 </h3>
                 <p data-card-text className="mt-3 text-sm leading-[1.5]">
