@@ -47,7 +47,7 @@ export default async function OpengraphImage() {
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
           <div style={{ fontSize: 52, fontWeight: 500, letterSpacing: "-0.025em", lineHeight: 1.05, maxWidth: 760 }}>
-            Jeg designer og bygger merkevare og nettsider.
+            Jeg designer og bygger webløsninger i Next.js og TypeScript.
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 22, letterSpacing: "0.04em" }}>
             <div style={{ width: 12, height: 12, background: "#ffffff" }} />

@@ -7,6 +7,8 @@ import LocalTime from "@/components/LocalTime";
 
 gsap.registerPlugin(SplitText);
 
+const meta = "2 år i Capgemini · BSc Frontend- og mobilutvikling · Åpen for jobb i Oslo";
+
 const nav = [
   { label: "Prosjekter", href: "#prosjekter" },
   { label: "Prosess", href: "#prosess" },
@@ -115,10 +117,18 @@ export default function Hero() {
         <p data-intro data-waypoint-start className="font-medium leading-[1.05]">
           <span className="block text-[36px] tracking-[-0.025em] md:text-[clamp(2.5rem,4.4vw,4rem)]">
             Jeg designer og bygger
-          </span>
+          </span>{" "}
+          {/* Mellomrommet over gjør at skjermlesere ikke leser de to linjene som ett ord */}
           <span className="block font-italic text-[40px] italic tracking-[-0.03em] md:text-[clamp(2.75rem,4.95vw,4.5rem)]">
-            merkevare og nettsider.
+            webløsninger i Next.js og TypeScript.
           </span>
+        </p>
+        <p data-fade className="mt-6 max-w-xl text-[17px] leading-[1.45] md:mt-8 md:text-[21px]">
+          To års erfaring som konsulent i Capgemini på Utdanningsdirektoratets systemer.
+        </p>
+        {/* På desktop står metalinjen nederst i venstre hjørne */}
+        <p data-fade className="mt-6 font-mono text-[13px] uppercase leading-[1.5] md:hidden">
+          {meta}
         </p>
       </section>
 

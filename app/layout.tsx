@@ -4,11 +4,11 @@ import SmoothScroll from "@/components/SmoothScroll";
 import CourseLine from "@/components/CourseLine";
 
 const description =
-  "Kaia Hellem designer og bygger merkevare og nettsider. Frontendutvikler og designer i Oslo.";
+  "Kaia Hellem, frontendutvikler og designer i Oslo. Designer og bygger webløsninger i Next.js og TypeScript, med to års erfaring som konsulent i Capgemini.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.kaiahellem.no"),
-  title: "Kaia Hellem — Design & web",
+  title: "Kaia Hellem — Frontendutvikler & designer",
   description,
   robots: { index: false, follow: false },
   // Safari på iPhone gjør ellers tall, datoer og adresser om til lenker. Det endrer siden før React
