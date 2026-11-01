@@ -6,9 +6,7 @@ import { SplitText } from "gsap/SplitText";
 
 gsap.registerPlugin(SplitText);
 
-const meta = "2 år i Capgemini · BSc Frontend- og mobilutvikling · Åpen for jobb";
-// På desktop står «Åpen for jobb» i høyre hjørne, så venstre hjørne får bare resten
-const metaDesktop = "2 år i Capgemini · BSc Frontend- og mobilutvikling";
+const meta = "2 år i Capgemini · BSc Frontend- og mobilutvikling";
 
 const nav = [
   { label: "Prosjekter", href: "#prosjekter" },
@@ -113,26 +111,30 @@ export default function Hero() {
       </header>
 
       <section className="px-4 pb-20 pt-24 text-accent md:pb-12 md:pl-[50%] md:pr-7 md:pt-28">
-        <p data-intro data-waypoint-start className="font-medium leading-[1.05]">
-          <span className="block text-[36px] tracking-[-0.025em] md:text-[clamp(2.5rem,4.4vw,4rem)]">
-            Frontendutvikler &amp; designer,
-          </span>{" "}
+        {/* To linjer som aldri bryter; størrelsen skalerer med skjermen så de alltid får plass */}
+        <p
+          data-intro
+          data-waypoint-start
+          className="text-[clamp(1.5rem,8.2vw,2.25rem)] font-medium leading-[1.05] tracking-[-0.025em] md:text-[clamp(2.5rem,4.4vw,4rem)]"
+        >
+          <span className="block whitespace-nowrap">Frontendutvikler og</span>{" "}
           {/* Mellomrommet over gjør at skjermlesere ikke leser de to linjene som ett ord */}
-          <span className="block font-italic text-[40px] italic tracking-[-0.03em] md:text-[clamp(2.75rem,4.95vw,4.5rem)]">
-            Oslo
+          <span className="block whitespace-nowrap">
+            designer i{" "}
+            <span className="font-italic text-[1.12em] font-normal italic tracking-[-0.03em]">Oslo</span>
           </span>
         </p>
-        {/* På desktop står metalinjen nederst i venstre hjørne */}
-        <p data-fade className="mt-6 font-mono text-[13px] uppercase leading-[1.5] md:hidden">
+        {/* Metalinjen hører til heroteksten. På desktop står «Åpen for jobb» i hjørnet nederst til høyre */}
+        <p data-fade className="mt-6 font-mono text-[13px] uppercase leading-[1.5] md:mt-8 md:text-[15px]">
           {meta}
+          <span className="md:hidden"> · Åpen for jobb</span>
         </p>
       </section>
 
       <div
         data-fade
-        className="mt-auto hidden items-end justify-between px-7 pb-5 font-mono text-[15px] uppercase leading-[1.4] text-accent md:flex"
+        className="mt-auto hidden items-end justify-end px-7 pb-5 font-mono text-[15px] uppercase leading-[1.4] text-accent md:flex"
       >
-        <p>{metaDesktop}</p>
         <p className="flex items-center gap-2">
           <span className="relative flex size-2">
             <span className="absolute inset-0 animate-ping bg-accent opacity-60 motion-reduce:hidden" />
