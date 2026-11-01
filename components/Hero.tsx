@@ -6,8 +6,8 @@ import { SplitText } from "gsap/SplitText";
 
 gsap.registerPlugin(SplitText);
 
-const meta = "2 år i Capgemini · BSc Frontend- og mobilutvikling · Åpen for jobb i Oslo";
-// På desktop står «Åpen for jobb i Oslo» i høyre hjørne, så venstre hjørne får bare resten
+const meta = "2 år i Capgemini · BSc Frontend- og mobilutvikling · Åpen for jobb";
+// På desktop står «Åpen for jobb» i høyre hjørne, så venstre hjørne får bare resten
 const metaDesktop = "2 år i Capgemini · BSc Frontend- og mobilutvikling";
 
 const nav = [
@@ -88,10 +88,7 @@ export default function Hero() {
           KAIA HELLEM
         </h1>
 
-        <div className="mt-4 flex flex-col gap-3 md:mt-5 xl:grid xl:grid-cols-2 xl:items-baseline xl:gap-0">
-          <p data-fade className="text-[15px] md:text-[19px]">
-            Frontendutvikler &amp; designer, Oslo
-          </p>
+        <div className="mt-4 md:mt-5">
           <div className="flex flex-col gap-3 md:flex-row md:items-baseline md:justify-between">
             <nav data-fade aria-label="Hovedmeny" className="flex flex-wrap gap-x-3 gap-y-1 text-[15px] md:gap-x-4 md:text-[19px]">
               {nav.map((n) => (
@@ -118,15 +115,12 @@ export default function Hero() {
       <section className="px-4 pb-20 pt-24 text-accent md:pb-12 md:pl-[50%] md:pr-7 md:pt-28">
         <p data-intro data-waypoint-start className="font-medium leading-[1.05]">
           <span className="block text-[36px] tracking-[-0.025em] md:text-[clamp(2.5rem,4.4vw,4rem)]">
-            Jeg designer og bygger
+            Frontendutvikler &amp; designer,
           </span>{" "}
           {/* Mellomrommet over gjør at skjermlesere ikke leser de to linjene som ett ord */}
           <span className="block font-italic text-[40px] italic tracking-[-0.03em] md:text-[clamp(2.75rem,4.95vw,4.5rem)]">
-            webløsninger i Next.js og TypeScript.
+            Oslo
           </span>
-        </p>
-        <p data-fade className="mt-6 max-w-xl text-[17px] leading-[1.45] md:mt-8 md:text-[21px]">
-          To års erfaring som konsulent i Capgemini på Utdanningsdirektoratets systemer.
         </p>
         {/* På desktop står metalinjen nederst i venstre hjørne */}
         <p data-fade className="mt-6 font-mono text-[13px] uppercase leading-[1.5] md:hidden">
@@ -144,7 +138,7 @@ export default function Hero() {
             <span className="absolute inset-0 animate-ping bg-accent opacity-60 motion-reduce:hidden" />
             <span className="relative size-2 bg-accent" />
           </span>
-          Åpen for jobb i Oslo
+          Åpen for jobb
         </p>
       </div>
     </div>
