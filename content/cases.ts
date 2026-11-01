@@ -102,7 +102,7 @@ export const cases: Case[] = [
         why: "Alt utenom noen få bakgrunnsjobber kjører som den innloggede brukeren, så reglene gjelder uansett hvor spørringen kommer fra. Serverkoden sjekker rollen i tillegg, så det er to lag.",
       },
       {
-        title: "Ende-til-ende-tester med tilgjengelighetssjekk",
+        title: "Automatiske sjekker av flyter og tilgjengelighet",
         choice:
           "Playwright-tester av innlogging, godkjenninger, opplasting, endringsønsker og kundeisolasjon, med axe-sjekk mot WCAG 2.1 AA på desktop og mobil.",
         alternative: "Bare manuell testing.",
