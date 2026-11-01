@@ -28,7 +28,6 @@ npm run dev
 | --- | --- | --- |
 | Loader | `components/Hero.tsx` | Teller til 100, glir opp, og navnet reiser seg bokstav for bokstav |
 | Kurslinje | `components/CourseLine.tsx` | Stiplet kurs som tegnes nedover siden mens man scroller, med veipunkter ved prosjektene (nettbrett og desktop) |
-| Lokal tid | `components/LocalTime.tsx` | Klokke i Oslo-tid nederst på første skjerm (desktop) |
 | Melle-kort | `components/MelleVisual.tsx` | Ordmerke og palett i kode, med reveal ved scroll |
 | Tekst-reveal | `components/RevealText.tsx` | Deler tekst i linjer som glir opp når de scrolles inn (GSAP SplitText + ScrollTrigger) |
 | HAVN-skjerm | `components/HavnMock.tsx` | Skjerm og mobil tegnes med strek, nettsiden ruller inne i skjermen mens du scroller |

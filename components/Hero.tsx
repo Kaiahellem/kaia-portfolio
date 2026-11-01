@@ -3,11 +3,12 @@
 import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
-import LocalTime from "@/components/LocalTime";
 
 gsap.registerPlugin(SplitText);
 
 const meta = "2 år i Capgemini · BSc Frontend- og mobilutvikling · Åpen for jobb i Oslo";
+// På desktop står «Åpen for jobb i Oslo» i høyre hjørne, så venstre hjørne får bare resten
+const metaDesktop = "2 år i Capgemini · BSc Frontend- og mobilutvikling";
 
 const nav = [
   { label: "Prosjekter", href: "#prosjekter" },
@@ -114,7 +115,7 @@ export default function Hero() {
         </div>
       </header>
 
-      <section className="px-4 pb-20 pt-24 text-accent md:pb-40 md:pl-[50%] md:pr-7 md:pt-40">
+      <section className="px-4 pb-20 pt-24 text-accent md:pb-12 md:pl-[50%] md:pr-7 md:pt-28">
         <p data-intro data-waypoint-start className="font-medium leading-[1.05]">
           <span className="block text-[36px] tracking-[-0.025em] md:text-[clamp(2.5rem,4.4vw,4rem)]">
             Jeg designer og bygger
@@ -135,15 +136,15 @@ export default function Hero() {
 
       <div
         data-fade
-        className="absolute inset-x-7 bottom-5 hidden items-end justify-between font-mono text-[15px] uppercase leading-[1.4] text-accent md:flex"
+        className="mt-auto hidden items-end justify-between px-7 pb-5 font-mono text-[15px] uppercase leading-[1.4] text-accent md:flex"
       >
-        <LocalTime />
+        <p>{metaDesktop}</p>
         <p className="flex items-center gap-2">
           <span className="relative flex size-2">
             <span className="absolute inset-0 animate-ping bg-accent opacity-60 motion-reduce:hidden" />
             <span className="relative size-2 bg-accent" />
           </span>
-          Åpen for jobb
+          Åpen for jobb i Oslo
         </p>
       </div>
     </div>
